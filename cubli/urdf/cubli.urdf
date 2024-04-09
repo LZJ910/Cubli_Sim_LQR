@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cubli">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.075 0.075 0.075"
+        rpy="0 0 0" />
+      <mass
+        value="0.83835176" />
+      <inertia
+        ixx="0.00361405"
+        ixy="2.218E-05"
+        ixz="2.361E-05"
+        iyy="0.00361405"
+        iyz="2.580E-05"
+        izz="0.00361405" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubli/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubli/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel1">
+    <inertial>
+      <origin
+        xyz="0.0040081 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.080877" />
+      <inertia
+        ixx="0.00017691"
+        ixy="0"
+        ixz="0"
+        iyy="8.8879E-05"
+        iyz="0"
+        izz="8.8879E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubli/meshes/wheel1.STL" />
+      </geometry>
+      <material
+        name="wheel1">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubli/meshes/wheel1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel1_joint"
+    type="continuous">
+    <origin
+      xyz="0.0079 0.08 0.08"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="0.3"
+      velocity="850" />
+  </joint>
+  <link
+    name="wheel2">
+    <inertial>
+      <origin
+        xyz="0 0.0040081 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.080877" />
+      <inertia
+        ixx="8.8879E-05"
+        ixy="0"
+        ixz="0"
+        iyy="0.00017691"
+        iyz="0"
+        izz="8.8879E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubli/meshes/wheel2.STL" />
+      </geometry>
+      <material
+        name="wheel2">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubli/meshes/wheel2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel2_joint"
+    type="continuous">
+    <origin
+      xyz="0.08 0.0079 0.08"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="0.3"
+      velocity="850" />
+  </joint>
+  <link
+    name="wheel3">
+    <inertial>
+      <origin
+        xyz="0 0 0.0040081"
+        rpy="0 0 0" />
+      <mass
+        value="0.080877" />
+      <inertia
+        ixx="8.8879E-05"
+        ixy="0"
+        ixz="0"
+        iyy="8.8879E-05"
+        iyz="0"
+        izz="0.00017691" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubli/meshes/wheel3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubli/meshes/wheel3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel3_joint"
+    type="continuous">
+    <origin
+      xyz="0.08 0.08 0.0079"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="0.3"
+      velocity="850" />
+  </joint>
+</robot>
